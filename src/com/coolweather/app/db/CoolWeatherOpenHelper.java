@@ -1,5 +1,7 @@
 package com.coolweather.app.db;
 
+import com.coolweather.app.util.LogUtil;
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
@@ -74,7 +76,8 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
-
+        
+		
 		db.execSQL(CREATE_PROVINCE);//创建Province表
 		db.execSQL(CREATE_CITY);//创建City表
 		db.execSQL(CREATE_COUNTY);//创建County表
